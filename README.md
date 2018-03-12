@@ -1,5 +1,8 @@
 # aiohttp_prometheus_monitoring
 
+[![PyPI](https://img.shields.io/pypi/v/aiohttp-prometheus-monitoring.svg?maxAge=3600)](https://pypi.python.org/pypi/aiohttp-prometheus-monitoring)
+[![Python Versions](https://img.shields.io/pypi/pyversions/aiohttp-prometheus-monitoring.svg?maxAge=3600)](https://pypi.python.org/pypi/aiohttp-prometheus-monitoring)
+
 This package allows to monitor availability of your aiohttp-application components and exports the metrics for prometheus scraper.
 
 It can monitor:
