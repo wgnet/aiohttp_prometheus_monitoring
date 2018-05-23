@@ -9,6 +9,7 @@ It can monitor:
 
 - external host HTTP status
 - postgres database status
+- mysql database status
 - redis availability
 - rabbit AMQP availability
 - whatever else, as can be extended easily
@@ -23,7 +24,7 @@ Then you can build graphs based on this data:
 
 ## Install:
 
-    pip install aiohttp_prometheus_monitoring[amqp,redis,postgres]
+    pip install aiohttp_prometheus_monitoring[amqp,redis,postgres,mysql]
 
 ## Sample config:
 
@@ -77,6 +78,19 @@ Then you can build graphs based on this data:
                     'password': 'core',
                     'host': 'localhost',
                     'port': 5433,
+                }
+            },
+            {
+                'name': 'monitoring_mysql',
+                'description': 'Check mysql connection',
+                'module': 'aiohttp_prometheus_monitoring.metrics.mysql.MySQLMetric',
+                'sleep_time': 60,
+                'params': {
+                    'database': 'core',
+                    'user': 'core',
+                    'password': 'core',
+                    'host': 'localhost',
+                    'port': 3007,
                 }
             },
         ]
