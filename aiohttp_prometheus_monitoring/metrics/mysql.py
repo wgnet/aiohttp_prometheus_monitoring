@@ -10,7 +10,7 @@ class MySQLMetric(BaseMetric):
         super().__init__(*args, **kwargs)
 
         self.connection_params = {
-            'database': database,
+            'db': database,
             'user': user,
             'password': password,
             'host': host,
@@ -29,4 +29,4 @@ class MySQLMetric(BaseMetric):
 
     async def check(self):
         response = await self.select_one(self.connection_params)
-        return response == [(1,)]
+        return response == ((1,),)
