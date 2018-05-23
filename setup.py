@@ -42,6 +42,7 @@ setup(
         'amqp': ['aioamqp>=0.9.0'],
         'postgres': ['aiopg'],
         'redis': ['aioredis'],
+        'mysql': ['aiomysql'],
     },
     classifiers=[
         'Programming Language :: Python',
