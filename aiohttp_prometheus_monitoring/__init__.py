@@ -42,7 +42,7 @@ async def init_metrics(config):
                 metric_class = import_by_path(metric['module'])
 
                 kwargs = metric['params']
-                kwargs['collector'] = Gauge(metric['name'], metric['description'], None)
+                kwargs['collector'] = Gauge(metric['name'], metric['description'])
 
                 task = PeriodicTask(metric['sleep_time'], metric_class, **kwargs)
                 await task.start()
