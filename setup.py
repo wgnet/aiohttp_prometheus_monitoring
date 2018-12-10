@@ -35,8 +35,8 @@ setup(
     author='Wargaming Team',
     install_requires=[
         'aiohttp',
-        'prometheus_client>=0.0.21',
-        'prometheus-async>=17.4.0',
+        'prometheus_client>=0.5.0',
+        'prometheus-async>=18.4.0',
     ],
     extras_require={
         'amqp': ['aioamqp>=0.9.0'],
